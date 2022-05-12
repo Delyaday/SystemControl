@@ -17,5 +17,6 @@ Wpf Application. Allows you to analyze data on your computer in order to search 
 4) NuGet пакет DependencyInjection - для внедрения инъекции зависимостей.
 5) Параллельные коллекции ConcurrentQueue и СoncurrentBag - для контролирования многопоточности.
 6) Класс Regex - регулярные выражения для поиска запрещенных слов.
+7) Класс Dispatcher - для управления очередью потоков.
 
 12.05.2022
