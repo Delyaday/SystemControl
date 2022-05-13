@@ -424,7 +424,7 @@ namespace SystemControl
             }
         }
 
-        private void AddedDirectoryDisplay(DirectoryInfo dir)
+        private void AddedDirectoryDisplay(DirectoryInfo dir) //следим за очередью потоков
         {
             if (Application.Current != null)
             {
@@ -490,7 +490,7 @@ namespace SystemControl
         
 
 
-        private bool IsActiveThread()
+        private bool IsActiveThread() //контролируем потоки
         {
             if (State == State.Idle)
                 return false;
