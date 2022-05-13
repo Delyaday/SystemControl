@@ -70,7 +70,6 @@ namespace SystemControl
             {
                 try
                 {
-
                     var directory = new DirectoryInfo(reportsFolder);
                     if (!directory.Exists)
                     {
@@ -78,7 +77,6 @@ namespace SystemControl
                     }
 
                     _reportsFolder = directory;
-
                 }
                 catch (Exception ex)
                 {
@@ -110,7 +108,7 @@ namespace SystemControl
         public ObservableCollection<ReportFileEntry> FilesWithCensoredWords => _filesWithCensoredWords;
         public ObservableCollection<CensoredWord> CensoredWords => _censoredWords;
 
-        public State State
+    public State State
         {
             get { return _state; }
             private set
@@ -424,7 +422,7 @@ namespace SystemControl
             }
         }
 
-        private void AddedDirectoryDisplay(DirectoryInfo dir) //следим за очередью потоков
+        private void AddedDirectoryDisplay(DirectoryInfo dir) 
         {
             if (Application.Current != null)
             {

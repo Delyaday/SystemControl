@@ -44,7 +44,6 @@
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#002A2B34" Offset="0"/>
                         <GradientStop Color="#FF2A2B34" Offset="1"/>
-
                     </LinearGradientBrush>
                 </Border.Background>
             </Border>
@@ -156,25 +155,23 @@
 
             <StackPanel Margin="20,0,0,0">
                 <TextBlock Text="Запрещённые слова:"/>
-                <ScrollViewer>
-                    <ItemsControl ItemsSource="{Binding CensoredWords}" Margin="10" HorizontalContentAlignment="Stretch">
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <Border BorderThickness="0,0,0,1" BorderBrush="#14ffffff" Padding="5" Margin="5">
-                                    <Grid >
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="*"/>
-                                            <ColumnDefinition Width="Auto"/>
-                                        </Grid.ColumnDefinitions>
+                <ItemsControl ItemsSource="{Binding CensoredWords}" Margin="10" HorizontalContentAlignment="Stretch">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border BorderThickness="0,0,0,1" BorderBrush="#14ffffff" Padding="5" Margin="5">
+                                <Grid >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
 
-                                        <TextBlock Text="{Binding Word}" />
-                                        <TextBlock Text="{Binding Count}" Grid.Column="1" />
-                                    </Grid>
-                                </Border>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                </ScrollViewer>
+                                    <TextBlock Text="{Binding Word}" />
+                                    <TextBlock Text="{Binding Count}" Grid.Column="1" />
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
             </StackPanel>
 
             <StackPanel Grid.Row="1" Margin="20,0,0,0">
